@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bulb Animation</title>
+</head>
+<body>
+    <section>
+        <div class="bulb">
+            <img src="./images/3-bulb-png-image 1.png" class="bulb-off">
+            <img src="./images/4-yellow-light-bulb-png-image 1.png" class="bulb-on">
+        </div>
+        <div class="back">
+            <svg xmlns="http://www.w3.org/2000/svg" width="393" height="456" viewBox="0 0 393 456" fill="none">
+                <g filter="url(#filter0_f_332_969)">
+                  <path d="M-21 346.5L188 15H206.5L409.5 346.5C375.667 372 316.9 440.5 206.5 440.5C96.1 440.5 8.83333 377.833 -21 346.5Z" fill="url(#paint0_radial_332_969)"/>
+                </g>
+                <defs>
+                  <filter id="filter0_f_332_969" x="-36" y="0" width="460.5" height="455.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feGaussianBlur stdDeviation="7.5" result="effect1_foregroundBlur_332_969"/>
+                  </filter>
+                  <radialGradient id="paint0_radial_332_969" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(188 15) rotate(90) scale(426 431.006)">
+                    <stop stop-color="#D9D9D9"/>
+                    <stop offset="0.0001" stop-color="#FEFD54"/>
+                    <stop offset="0.578125" stop-color="#F6D32A" stop-opacity="0.421917"/>
+                    <stop offset="1" stop-color="#F1B40C" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+              </svg>
+            <img src="./images/Frame 1171275835.png" alt="">
+        </div>
+        <div class="switches">
+            <img src="./images/On-and-off-switch-buttons-on-transparent-background-PNG 1.png" id="switch-off">
+            <img src="./images/On-and-off-switch-buttons-on-transparent-background-PNG 1 (1).png" id="switch-on">
+        </div>
+    </section>
+
+    <script>
+        const switchOn = document.getElementById('switch-on');
+        const switchOff = document.getElementById('switch-off');
+        const bulbOn = document.getElementsByClassName('bulb-on');
+        const bulbOff = document.getElementsByClassName('bulb-off');
+        const lights = document.getElementsByClassName('back');
+
+        switchOff.addEventListener('click', ()=>{
+            switchOff.style.display = "none";
+            switchOn.style.display = "block";
+            bulbOff[0].style.display = "none";
+            bulbOn[0].style.display = "block";
+            lights[0].classList.add('active');
+        });
+        switchOn.addEventListener('click', ()=>{
+            switchOn.style.display = "none";
+            switchOff.style.display = "block";
+            bulbOn[0].style.display = "none";
+            bulbOff[0].style.display = "block";
+            lights[0].classList.remove('active');
+        });
+    </script>
+    
+</body>
+</html>
