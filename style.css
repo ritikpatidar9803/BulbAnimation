@@ -30,7 +30,6 @@ section .bulb-on {
 }
 
 section .switches{
-    margin-top: 50px;
     cursor: pointer;
 }
 section .switches #switch-on {
